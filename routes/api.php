@@ -18,4 +18,5 @@ use Illuminate\Support\Facades\Route;
 
 // ! Tutte le nostre rotte hanno 'api/' davanti
 // lista dei miei progetti
-Route::get('/projects', [ProjectController::class, 'index']);
+
+Route::apiResource('projects', ProjectController::class);

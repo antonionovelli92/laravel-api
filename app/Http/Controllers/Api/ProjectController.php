@@ -13,7 +13,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::where('is_published', true)->with('category', 'tags')->orderBy('updated_at', 'DESC')->get();
+        $projects = Project::where('is_published', true)->with('category', 'tags')->orderBy('updated_at', 'DESC')->paginate(5);
 
 
         foreach ($projects as $project) {

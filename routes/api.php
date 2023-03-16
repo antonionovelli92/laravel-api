@@ -20,3 +20,6 @@ use Illuminate\Support\Facades\Route;
 // lista dei miei progetti
 
 Route::apiResource('projects', ProjectController::class);
+
+// Rotta per il dettaglio del singolo progetto
+Route::get('/projects/{project}', [ProjectController::class, 'show']);
